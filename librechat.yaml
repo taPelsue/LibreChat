@@ -8,12 +8,12 @@ endpoints:
   custom:
     - name: "OpenRouter"
       baseURL: "https://openrouter.ai/api/v1"
-      apiKey: "${OPENROUTER_KEY}"   # use OPENROUTER_KEY (not OPENROUTER_API_KEY)
+      apiKey: "${OPENROUTER_KEY}"     # use OPENROUTER_KEY
       models:
         default:
           - "openai/gpt-4o"
           - "openai/gpt-3.5-turbo"
-        fetch: false                # keeps the dropdown limited to the two above
+        fetch: false
       titleConvo: true
       titleModel: "openai/gpt-4o"
       modelDisplayLabel: "OpenRouter"
