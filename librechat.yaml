@@ -1,6 +1,21 @@
 version: "1.2.8"
 cache: true
 
+interface:
+  mcpServers:
+    placeholder: "MCP Servers"
+  privacyPolicy:
+    externalUrl: "https://docs.pelsue.com/tools/pelsuechat/"
+    openNewTab: true
+  termsOfService:
+    externalUrl: "https://docs.pelsue.com/tools/pelsuechat/"
+    openNewTab: true
+    modalAcceptance: true
+    modalTitle: "Terms of Service"
+    modalContent: |
+      # Terms of Service
+      ## Introduction
+      Welcome to LibreChat!
  
 
 webSearch:
