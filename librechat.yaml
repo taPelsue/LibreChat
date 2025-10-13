@@ -1,10 +1,6 @@
 version: "1.3.0"
 cache: true
 
-interface:
-  agents:
-    sharing: true
-
 webSearch:
   serperApiKey: "${SERPER_API_KEY}"
   searchProvider: "serper"
