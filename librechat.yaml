@@ -1,8 +1,12 @@
 version: "1.2.8"
 cache: true
 
-branding:
-  appName: "Pelsue Chat"
+app:
+  title: "Pelsue Chat"
+  description: "AI assistant for Pelsue"
+
+interface:
+  customWelcome: "Hey {{user.name}}! Visit 'https://docs.pelsue.com/tools/pelsuechat/' for more information.
 
 webSearch:
   serperApiKey: "${SERPER_API_KEY}"
