@@ -1,0 +1,15 @@
+version: 1.0
+
+providers:
+  - id: openrouter
+    label: OpenRouter
+    apiKey: ${OPENROUTER_API_KEY}
+    apiUrl: https://openrouter.ai/api/v1
+    models:
+      - id: openai/gpt-4o
+        label: GPT-4o
+      - id: openai/gpt-3.5-turbo
+        label: GPT-3.5-Turbo
+
+defaultProvider: openrouter
+defaultModel: openai/gpt-4o
