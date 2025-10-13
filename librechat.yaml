@@ -77,6 +77,3 @@ mcpServers:
     # Optional: Add more headers or params if needed (e.g., for custom auth)
     # For project-scoped: The server auto-limits to this project after auth.
 
-agents:
-  defaultAgent:
-    mcpServers: ["supabaseReadonly"]  # Enable this MCP in agents (optional; also works in chat UI)
