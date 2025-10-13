@@ -31,3 +31,36 @@ endpoints:
       titleConvo: true
       titleModel: "openai/gpt-3.5-turbo"
       modelDisplayLabel: "GPT-3.5-Turbo"
+# keep your endpoints as you have them (one custom endpoint per model)
+
+agents:
+  modelSpecs:
+    - id: "gpt4o-agent"
+      title: "🟣 GPT-4o"
+      endpoint: "GPT-4o"              # must match your custom endpoint name
+      model: "openai/gpt-4o"
+      isPublic: true
+      favorite: true                  # pins it for visibility
+
+    - id: "gpt35-agent"
+      title: "🟢 GPT-3.5-Turbo"
+      endpoint: "GPT-3.5-Turbo"
+      model: "openai/gpt-3.5-turbo"
+      isPublic: true
+      favorite: true
+
+presets:
+  - id: "gpt4o-preset"
+    title: "🟣 GPT-4o"
+    endpoint: "GPT-4o"
+    model: "openai/gpt-4o"
+    isPublic: true
+    favorite: true
+
+  - id: "gpt35-preset"
+    title: "🟢 GPT-3.5-Turbo"
+    endpoint: "GPT-3.5-Turbo"
+    model: "openai/gpt-3.5-turbo"
+    isPublic: true
+    favorite: true
+      
