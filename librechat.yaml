@@ -1,9 +1,7 @@
 version: "1.2.8"
 cache: true
 
-interface:
-  customName: "Pelsue Chat"
-  customWelcome: "Hey {{user.name}}! Visit https://docs.pelsue.com/tools/pelsuechat/ for more information."
+ 
 
 webSearch:
   serperApiKey: "${SERPER_API_KEY}"
