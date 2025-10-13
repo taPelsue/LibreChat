@@ -5,29 +5,15 @@ registration:
   socialLogins: ["openid"]   # Entra only
 
 endpoints:
-  openAI:
-    enabled: false
-    groups: ["default"]
-  azureOpenAI:
-    enabled: false
-    groups: ["default"]
-  anthropic:
-    enabled: false
-    groups: ["default"]
-  google:
-    enabled: false
-    groups: ["default"]
-
   custom:
     - name: "OpenRouter"
       baseURL: "https://openrouter.ai/api/v1"
-      apiKey: "${OPENROUTER_KEY}"
-      groups: ["default"]
+      apiKey: "${OPENROUTER_KEY}"   # use OPENROUTER_KEY (not OPENROUTER_API_KEY)
       models:
         default:
           - "openai/gpt-4o"
           - "openai/gpt-3.5-turbo"
-        fetch: false
+        fetch: false                # keeps the dropdown limited to the two above
       titleConvo: true
       titleModel: "openai/gpt-4o"
       modelDisplayLabel: "OpenRouter"
