@@ -1,23 +1,6 @@
 version: "1.3.0"
 cache: true
 
-interface:
-  mcpServers:
-    placeholder: "MCP Servers"
-  privacyPolicy:
-    externalUrl: "https://docs.pelsue.com/tools/pelsuechat/"
-    openNewTab: true
-  termsOfService:
-    externalUrl: "https://docs.pelsue.com/tools/pelsuechat/"
-    openNewTab: true
-    modalAcceptance: true
-    modalTitle: "Terms of Service"
-    modalContent: |
-      # Terms of Service
-      ## Introduction
-      Welcome to LibreChat!
- 
-
 webSearch:
   serperApiKey: "${SERPER_API_KEY}"
   searchProvider: "serper"
@@ -78,5 +61,6 @@ mcpServers:
     env:
       SUPABASE_ACCESS_TOKEN: "${SUPABASE_ACCESS_TOKEN}"
 
-agents:
-  sharing: true
+endpoints:
+  agents:
+    sharing: true
