@@ -7,22 +7,22 @@ registration:
 endpoints:
   openAI:
     enabled: false
-    groups: []
+    groups: ["default"]
   azureOpenAI:
     enabled: false
-    groups: []
+    groups: ["default"]
   anthropic:
     enabled: false
-    groups: []
+    groups: ["default"]
   google:
     enabled: false
-    groups: []
+    groups: ["default"]
 
   custom:
     - name: "OpenRouter"
       baseURL: "https://openrouter.ai/api/v1"
-      apiKey: "${OPENROUTER_KEY}"     # use OPENROUTER_KEY
-      groups: []
+      apiKey: "${OPENROUTER_KEY}"
+      groups: ["default"]
       models:
         default:
           - "openai/gpt-4o"
