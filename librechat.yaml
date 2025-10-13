@@ -18,7 +18,8 @@ endpoints:
       models:
         default: [
           "openai/gpt-4o",
-          "x-ai/grok-4-fast"
+          "x-ai/grok-4-fast",
+          "openai/gpt-oss-120b"
           ]  # only this model
         fetch: false
       titleConvo: true
