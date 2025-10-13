@@ -50,6 +50,8 @@ endpoints:
       titleConvo: true
       titleModel: "openai/gpt-4o"
       modelDisplayLabel: "Model"   # label on message bubbles
+  agents:
+    sharing: true
 
 
 mcpServers:
