@@ -5,14 +5,21 @@ registration:
   socialLogins: ["openid"]   # Entra only
 
 endpoints:
+  openAI:
+    enabled: false
+  anthropic:
+    enabled: false
+  google:
+    enabled: false
   custom:
-    - name: "OpenRouter"
+    - name: "Available Models"
       baseURL: "https://openrouter.ai/api/v1"
       apiKey: "${OPENROUTER_KEY}"     # use OPENROUTER_KEY
       models:
         default:
           - "openai/gpt-4o"
           - "openai/gpt-3.5-turbo"
+          - "x-ai/grok-4-fast"
         fetch: false
       titleConvo: true
       titleModel: "openai/gpt-4o"
