@@ -1,10 +1,6 @@
 version: "1.2.8"
 cache: true
 
-meta:
-  title: "Pelsue Chat"
-  description: "AI assistant for Pelsue"
-
 interface:
   customName: "Pelsue Chat"
   customWelcome: "Hey {{user.name}}! Visit https://docs.pelsue.com/tools/pelsuechat/ for more information."
