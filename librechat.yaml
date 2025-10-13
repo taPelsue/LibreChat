@@ -12,55 +12,15 @@ endpoints:
   google:
     enabled: false
   custom:
-    - name: "GPT-4o"                # appears in the model selector
+    - name: "OpenRouter"                # appears in the model selector
       baseURL: "https://openrouter.ai/api/v1"
       apiKey: "${OPENROUTER_KEY}"
       models:
-        default: ["openai/gpt-4o"]  # only this model
+        default: [
+          "openai/gpt-4o",
+          "x-ai/grok-4-fast"
+          ]  # only this model
         fetch: false
       titleConvo: true
       titleModel: "openai/gpt-4o"
-      modelDisplayLabel: "GPT-4o"   # label on message bubbles
-
-    - name: "GPT-3.5-Turbo"
-      baseURL: "https://openrouter.ai/api/v1"
-      apiKey: "${OPENROUTER_KEY}"
-      models:
-        default: ["openai/gpt-3.5-turbo"]
-        fetch: false
-      titleConvo: true
-      titleModel: "openai/gpt-3.5-turbo"
-      modelDisplayLabel: "GPT-3.5-Turbo"
-# keep your endpoints as you have them (one custom endpoint per model)
-
-agents:
-  modelSpecs:
-    - id: "gpt4o-agent"
-      title: "🟣 GPT-4o"
-      endpoint: "GPT-4o"              # must match your custom endpoint name
-      model: "openai/gpt-4o"
-      isPublic: true
-      favorite: true                  # pins it for visibility
-
-    - id: "gpt35-agent"
-      title: "🟢 GPT-3.5-Turbo"
-      endpoint: "GPT-3.5-Turbo"
-      model: "openai/gpt-3.5-turbo"
-      isPublic: true
-      favorite: true
-
-presets:
-  - id: "gpt4o-preset"
-    title: "🟣 GPT-4o"
-    endpoint: "GPT-4o"
-    model: "openai/gpt-4o"
-    isPublic: true
-    favorite: true
-
-  - id: "gpt35-preset"
-    title: "🟢 GPT-3.5-Turbo"
-    endpoint: "GPT-3.5-Turbo"
-    model: "openai/gpt-3.5-turbo"
-    isPublic: true
-    favorite: true
-      
+      modelDisplayLabel: "OpenRouter"   # label on message bubbles
