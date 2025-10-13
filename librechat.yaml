@@ -65,15 +65,14 @@ endpoints:
 
 
 mcpServers:
-  supabaseReadonly:  # Custom name for this server (e.g., for UI dropdown)
-    name: "Supabase Database (Readonly)"
-    description: "Query your Supabase database with natural language. Readonly SELECT queries only."
-    url: "https://mcp.supabase.com/mcp?read_only=true"  # Supabase remote MCP with readonly flag
-    transport: "streamable-http"  # Recommended for production/multi-user; stateless and scalable
-    headers:  # Authentication: Use Supabase API keys
-      Authorization: "Bearer {{SUPABASE_ANON_KEY}}"  # Replace with your anon key; use env var
-      apikey: "{{SUPABASE_ANON_KEY}}"  # Duplicate for compatibility
-    projectRef: "{{SUPABASE_PROJECT_REF}}"  # Optional: Scope to your project ID/ref for isolation (e.g., "abcdefghijklmnop")
-    # Optional: Add more headers or params if needed (e.g., for custom auth)
-    # For project-scoped: The server auto-limits to this project after auth.
-
+  PelsueData:
+    name: "Pelsue Data (Readonly)"
+    description: "Query Proman data with natural language. Readonly SELECT queries only."
+    command: "npx"
+    args:
+      - "-y"
+      - "@supabase/mcp-server-supabase@latest"
+      - "--read-only"
+      - "--project-ref={{SUPABASE_PROJECT_REF}}"
+    env:
+      SUPABASE_ACCESS_TOKEN: "{{SUPABASE_ACCESS_TOKEN}}"
