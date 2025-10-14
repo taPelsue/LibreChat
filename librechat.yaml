@@ -86,6 +86,7 @@ endpoints:
           - "openai/gpt-5"
           - "anthropic/claude-sonnet-4.5"
           - "tngtech/deepseek-r1t2-chimera:free"
+          - "x-ai/grok-code-fast-1"
 
 
 
