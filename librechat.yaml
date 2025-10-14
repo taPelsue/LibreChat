@@ -31,8 +31,8 @@ modelSpecs:
   prioritize: false  # Allow users to select other endpoints too
   list:
     - name: "grok-4-fast"  # Unique identifier
-      label: "Grok 4 Fast 💰"  # Custom display name
-      description: "Fast Grok model from X.AI"
+      label: "Grok 4 Fast"  # Custom display name
+      description: "Fast Grok model from X.AI 💰"
       iconURL: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/XAI-Logo.svg/250px-XAI-Logo.svg.png"  # Custom icon
       default: true  # Make this the default selection
       preset:
@@ -40,24 +40,34 @@ modelSpecs:
         model: "x-ai/grok-4-fast"  # Actual model ID for API
         temperature: 0.7
         max_tokens: 4000
-        modelLabel: "Xai - Grok 4 Fast"
+        modelLabel: "Grok 4 Fast"
     
-    - name: "gpt4o"
-      label: "GPT-4o 💰"
+    - name: "gpt5-mini"
+      label: "GPT-5 Mini"
+      description: "Compact version of GPT-5. 💰"
       iconURL: "openAI"  # Use built-in icon
       preset:
         endpoint: "OpenRouter"
-        model: "openai/gpt-4o"
-        modelLabel: "GPT-4o"
+        model: "openai/gpt-5-mini"
+        modelLabel: "GPT-5 Mini"
 
     - name: "gpt5"
-      label: "GPT-5 💰💰💰"
-      description: "OpenAI’s most advanced model"
+      label: "GPT-5"
+      description: "OpenAI’s most advanced model 💰💰💰"
       iconURL: "openAI"  # Use built-in icon
       preset:
         endpoint: "OpenRouter"
         model: "openai/gpt-5"
         modelLabel: "GPT-5"
+
+    - name: "sonnet4.5"
+      label: "Sonnet 4.5"
+      description: "Anthropic’s most advanced Sonnet model 💰💰💰💰"
+      iconURL: "Anthropic"  # Use built-in icon
+      preset:
+        endpoint: "OpenRouter"
+        model: "anthropic/claude-sonnet-4.5"
+        modelLabel: "Sonnet 4.5"
 
 endpoints:
   custom:
@@ -69,6 +79,7 @@ endpoints:
           - "x-ai/grok-4-fast"
           - "openai/gpt-4o"
           - "anthropic/claude-sonnet-4.5"
+          - "x-ai/grok-code-fast-1"
         fetch: false
       titleConvo: true
       modelDisplayLabel: "OpenRouter"
