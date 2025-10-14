@@ -39,12 +39,11 @@ modelSpecs:
         endpoint: "OpenRouter"  # Must match your custom endpoint name
         model: "x-ai/grok-4-fast"  # Actual model ID for API
         temperature: 0.7
-        max_tokens: 4000
         modelLabel: "Grok 4 Fast"
     
     - name: "gpt5-mini"
       label: "GPT-5 Mini"
-      description: "Compact version of GPT-5. 💰"
+      description: "Compact version of GPT-5. 💰💰"
       iconURL: "openAI"  # Use built-in icon
       preset:
         endpoint: "OpenRouter"
