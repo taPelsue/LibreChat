@@ -10,6 +10,7 @@ webSearch:
   searchProvider: "serper"
   
   firecrawlApiUrl: "${FIRECRAWL_API_URL}"
+  firecrawlApiKey: "${FIRECRAWL_API_KEY}"
   scraperType: "firecrawl"
 
 
