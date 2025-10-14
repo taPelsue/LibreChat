@@ -21,31 +21,44 @@ webSearch:
 registration:
   socialLogins: ["openid"]   # Entra only
 
+# Model Specifications for custom names and icons
+modelSpecs:
+  enforce: false  # Don't force only these models
+  prioritize: false  # Allow users to select other endpoints too
+  list:
+    - name: "grok-4-fast"  # Unique identifier
+      label: "Xai - Grok 4 Fast"  # Custom display name
+      description: "Fast Grok model from X.AI"
+      iconURL: "https://x.ai/logo.png"  # Custom icon
+      default: true  # Make this the default selection
+      preset:
+        endpoint: "OpenRouter"  # Must match your custom endpoint name
+        model: "x-ai/grok-4-fast"  # Actual model ID for API
+        temperature: 0.7
+        max_tokens: 4000
+        modelLabel: "Xai - Grok 4 Fast"
+    
+    - name: "gpt4o"
+      label: "OpenAI - GPT-4o"
+      iconURL: "openAI"  # Use built-in icon
+      preset:
+        endpoint: "OpenRouter"
+        model: "openai/gpt-4o"
+        modelLabel: "GPT-4o"
+
 endpoints:
-  openAI:
-    enabled: false
-  anthropic:
-    enabled: false
-  google:
-    enabled: false
   custom:
-    - name: "OpenRouter"                # appears in the model selector
-      baseURL: "https://openrouter.ai/api/v1"
+    - name: "OpenRouter"
       apiKey: "${OPENROUTER_KEY}"
+      baseURL: "https://openrouter.ai/api/v1"
       models:
-        default:  # Now a map for aliases: key = model ID, value = display name
-          "x-ai/grok-4-fast": "Xai - Grok 4 Fast"  # Your requested custom display
-          "openai/gpt-4o": "OpenAI - GPT-4o"
-          "openai/gpt-oss-120b": "OpenAI - GPT-OSS 120B"
-          "openai/gpt-5-chat": "OpenAI - GPT-5 Chat"  # Note: This may not exist yet
-          "anthropic/claude-sonnet-4.5": "Anthropic - Claude Sonnet 4.5"
-          "google/gemini-2.5-flash": "Google - Gemini 2.5 Flash"
-          "x-ai/grok-code-fast-1": "Xai - Grok Code Fast 1"
+        default:  # This MUST be an array
+          - "x-ai/grok-4-fast"
+          - "openai/gpt-4o"
+          - "anthropic/claude-sonnet-4.5"
         fetch: false
       titleConvo: true
-      titleModel: "openai/gpt-4o"
-      modelDisplayLabel: "Model"   # label on message bubbles
-
+      modelDisplayLabel: "OpenRouter"
 
 mcpServers:
   PelsueData:
