@@ -1,6 +1,10 @@
 version: "1.3.0"
 cache: true
 
+interface:
+  modelSelect: true
+  parameters: true
+
 webSearch:
   serperApiKey: "${SERPER_API_KEY}"
   searchProvider: "serper"
@@ -29,7 +33,7 @@ modelSpecs:
     - name: "grok-4-fast"  # Unique identifier
       label: "Xai - Grok 4 Fast"  # Custom display name
       description: "Fast Grok model from X.AI"
-      iconURL: "https://x.ai/logo.png"  # Custom icon
+      iconURL: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/XAI-Logo.svg/250px-XAI-Logo.svg.png"  # Custom icon
       default: true  # Make this the default selection
       preset:
         endpoint: "OpenRouter"  # Must match your custom endpoint name
