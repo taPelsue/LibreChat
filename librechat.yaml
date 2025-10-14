@@ -73,18 +73,7 @@ modelSpecs:
         model: "tngtech/deepseek-r1t2-chimera:free"
         modelLabel: "DeepSeek R1"
 
-endpoints:
-  custom:
-    - name: "OpenRouter"
-      apiKey: "${OPENROUTER_KEY}"
-      baseURL: "https://openrouter.ai/api/v1"
-      models:
-        default:  # This MUST be an array
-          - "openai/gpt-4o"
-          - "x-ai/grok-code-fast-1"
-        fetch: false
-      titleConvo: true
-      modelDisplayLabel: "OpenRouter"
+
 
 mcpServers:
   PelsueData:
