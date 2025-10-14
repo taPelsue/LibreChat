@@ -23,7 +23,7 @@ registration:
 
 # Model Specifications for custom names and icons
 modelSpecs:
-  enforce: true  # Don't force only these models
+  enforce: false  # Don't force only these models
   prioritize: false  # Allow users to select other endpoints too
   list:
     - name: "grok-4-fast"  # Unique identifier
