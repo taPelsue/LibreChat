@@ -8,15 +8,11 @@ interface:
 webSearch:
   serperApiKey: "${SERPER_API_KEY}"
   searchProvider: "serper"
-  
-  firecrawlApiUrl: "${FIRECRAWL_API_URL}"
-  scraperType: "firecrawl"
-
 
   jinaApiKey: "${JINA_API_KEY}"
   rerankerType: "jina"
 
-  scraperTimeout: 7500 # Timeout in milliseconds for scraper requests (default: 7500)
+  
   safeSearch: 1 # Options: 0 (OFF), 1 (MODERATE - default), 2 (STRICT)
 
   
