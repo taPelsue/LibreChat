@@ -63,7 +63,7 @@ modelSpecs:
     - name: "sonnet4.5"
       label: "Sonnet 4.5"
       description: "Anthropic’s most advanced Sonnet model 💰💰💰💰"
-      iconURL: "Anthropic"  # Use built-in icon
+      iconURL: "anthropic"  # Use built-in icon
       preset:
         endpoint: "OpenRouter"
         model: "anthropic/claude-sonnet-4.5"
