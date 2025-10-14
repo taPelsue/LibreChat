@@ -69,6 +69,15 @@ modelSpecs:
         model: "anthropic/claude-sonnet-4.5"
         modelLabel: "Sonnet 4.5"
 
+    - name: "deepseekR1T2"
+      label: "DeepSeek R1T2"
+      description: "US Hosted varient (Free)"
+      iconURL: "https://upload.wikimedia.org/wikipedia/commons/9/95/DeepSeek-icon.svg" 
+      preset:
+        endpoint: "OpenRouter"
+        model: "tngtech/deepseek-r1t2-chimera:free"
+        modelLabel: "DeepSeek R1"
+
 endpoints:
   custom:
     - name: "OpenRouter"
@@ -76,9 +85,7 @@ endpoints:
       baseURL: "https://openrouter.ai/api/v1"
       models:
         default:  # This MUST be an array
-          - "x-ai/grok-4-fast"
           - "openai/gpt-4o"
-          - "anthropic/claude-sonnet-4.5"
           - "x-ai/grok-code-fast-1"
         fetch: false
       titleConvo: true
