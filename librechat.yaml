@@ -24,7 +24,7 @@ registration:
 # Model Specifications for custom names and icons
 modelSpecs:
   enforce: false  # Don't force only these models
-  prioritize: false  # Allow users to select other endpoints too
+  prioritize: true  # Allow users to select other endpoints too
   list:
     - name: "grok-4-fast"  # Unique identifier
       label: "Grok 4 Fast"  # Custom display name
@@ -73,7 +73,18 @@ modelSpecs:
         model: "tngtech/deepseek-r1t2-chimera:free"
         modelLabel: "DeepSeek R1"
 
-
+endpoints:
+  custom:
+    - name: "OpenRouter"
+      apiKey: "${OPENROUTER_KEY}"
+      baseURL: "https://openrouter.ai/api/v1"
+      models:
+        default:  # This MUST be an array
+          - "openai/gpt-4o"
+          - "x-ai/grok-code-fast-1"
+        fetch: false
+      titleConvo: true
+      modelDisplayLabel: "OpenRouter"
 
 mcpServers:
   PelsueData:
