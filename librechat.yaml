@@ -79,6 +79,12 @@ endpoints:
       apiKey: "${OPENROUTER_KEY}"
       baseURL: "https://openrouter.ai/api/v1"
       models:
+        default:
+          - "x-ai/grok-4-fast"
+          - "openai/gpt-5-mini"
+          - "openai/gpt-5"
+          - "anthropic/claude-sonnet-4.5"
+          - "tngtech/deepseek-r1t2-chimera:free"
         fetch: true
       titleConvo: true
       modelDisplayLabel: "OpenRouter"
