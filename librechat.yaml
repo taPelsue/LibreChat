@@ -23,7 +23,7 @@ registration:
 
 # Model Specifications for custom names and icons
 modelSpecs:
-  enforce: false  # Don't force only these models
+  enforce: true  # Don't force only these models
   prioritize: true  # Allow users to select other endpoints too
   list:
     - name: "grok-4-fast"  # Unique identifier
@@ -79,11 +79,7 @@ endpoints:
       apiKey: "${OPENROUTER_KEY}"
       baseURL: "https://openrouter.ai/api/v1"
       models:
-        default:  # This MUST be an array
-          - "x-ai/grok-4-fast"
-          - "openai/gpt-4o"
-          - "x-ai/grok-code-fast-1"
-        fetch: false
+        fetch: true
       titleConvo: true
       modelDisplayLabel: "OpenRouter"
 
